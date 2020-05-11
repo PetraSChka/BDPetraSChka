@@ -10,14 +10,30 @@ Path of datafile location: E:\BD\oradata\ORCL\DATAFILE\
 Calling create_tablespace.sql for data tablespace
 MMF_9_1_4_DATA
 E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_DATA.dbf
-old   1: CREATE TABLESPACE  &&DATA_TBS_NAME
+old   1: CREATE TABLESPACE  &&TYPE_TBS_NAME
 new   1: CREATE TABLESPACE  MMF_9_1_4_DATA
-old   3:         '&&DATA_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+old   3:         '&&TYPE_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 
 Tablespace created.
 
-Elapsed: 00:00:00.76
+Elapsed: 00:00:00.63
+*********
+
+*********
+Calling create_tablespace.sql for index tablespace
+Enter value for user_name: MMF_9_1_4
+Enter value for tbs_location: E:\BD\oradata\ORCL\DATAFILE\
+MMF_9_1_4_INDEX
+E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_INDEX.dbf
+old   1: CREATE TABLESPACE  &&TYPE_TBS_NAME
+new   1: CREATE TABLESPACE  MMF_9_1_4_INDEX
+old   3:         '&&TYPE_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+
+Tablespace created.
+
+Elapsed: 00:00:00.81
 *********
 
 *********
@@ -37,7 +53,8 @@ new   5: QUOTA 20M on MMF_9_1_4_DATA
 
 User created.
 
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.05
+SP2-0734: unknown command beginning "QUOTA 20M ..." - rest of line ignored.
 *********
 
 *********
@@ -47,7 +64,7 @@ new   1: GRANT CREATE PROCEDURE TO MMF_9_1_4
 
 Grant succeeded.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 old   1: GRANT CREATE SEQUENCE TO &&SCHEMA_NAME
 new   1: GRANT CREATE SEQUENCE TO MMF_9_1_4
 

@@ -1,5 +1,6 @@
 Enter value for 1: MMF_9_1_4
 Enter value for 2: MMF_9_1_4_DATA
+Enter value for 3: MMF_9_1_4_INDEX
 *********
 Username caling to drop_user: MMF_9_1_4
 old   1: DROP USER &&USER_NAME_DROP CASCADE
@@ -7,7 +8,7 @@ new   1: DROP USER MMF_9_1_4 CASCADE
 
 User dropped.
 
-Elapsed: 00:00:00.16
+Elapsed: 00:00:00.07
 *********
 
 *********
@@ -17,6 +18,16 @@ new   1: DROP TABLESPACE MMF_9_1_4_DATA
 
 Tablespace dropped.
 
-Elapsed: 00:00:05.60
+Elapsed: 00:00:05.56
+*********
+
+*********
+Username caling to drop_tablspace: MMF_9_1_4_INDEX
+old   1: DROP TABLESPACE &&TABLESPACE_NAME
+new   1: DROP TABLESPACE MMF_9_1_4_INDEX
+
+Tablespace dropped.
+
+Elapsed: 00:00:05.24
 *********
 

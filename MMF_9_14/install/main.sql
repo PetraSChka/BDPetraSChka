@@ -22,8 +22,14 @@ PROMPT *********
 PROMPT
 
 PROMPT *********
+PROMPT Calling create_tablespace.sql for index tablespace
+@create_tablespace.sql &&USER_NAME &&TBS_LOCATION INDEX
+PROMPT *********
+PROMPT
+
+PROMPT *********
 PROMPT Calling create_user.sql 
-@create_user.sql &&USER_NAME &&SCHEMA_PASSWORD &&USER_NAME._DATA
+@create_user.sql &&USER_NAME &&SCHEMA_PASSWORD &&USER_NAME._DATA &&USER_NAME._INDEX
 PROMPT *********
 PROMPT
 
