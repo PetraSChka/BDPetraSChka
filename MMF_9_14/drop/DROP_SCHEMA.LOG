@@ -1,33 +1,36 @@
-Enter value for 1: MMF_9_1_4
-Enter value for 2: MMF_9_1_4_DATA
-Enter value for 3: MMF_9_1_4_INDEX
+Enter value for 1: MMF_914
+Enter value for 2: MMF_914_DATA
+Enter value for 3: MMF_914_INDEX
 *********
-Username caling to drop_user: MMF_9_1_4
+Username caling to drop_user: MMF_914
 old   1: DROP USER &&USER_NAME_DROP CASCADE
-new   1: DROP USER MMF_9_1_4 CASCADE
+new   1: DROP USER MMF_914 CASCADE
+DROP USER MMF_914 CASCADE
+*
+ERROR at line 1:
+ORA-01940: cannot drop a user that is currently connected 
 
-User dropped.
 
-Elapsed: 00:00:00.07
+Elapsed: 00:00:00.01
 *********
 
 *********
-Username caling to drop_tablspace: MMF_9_1_4_DATA
+Username caling to drop_tablspace: MMF_914_DATA
 old   1: DROP TABLESPACE &&TABLESPACE_NAME
-new   1: DROP TABLESPACE MMF_9_1_4_DATA
+new   1: DROP TABLESPACE MMF_914_DATA
 
 Tablespace dropped.
 
-Elapsed: 00:00:05.56
+Elapsed: 00:00:06.20
 *********
 
 *********
-Username caling to drop_tablspace: MMF_9_1_4_INDEX
+Username caling to drop_tablspace: MMF_914_INDEX
 old   1: DROP TABLESPACE &&TABLESPACE_NAME
-new   1: DROP TABLESPACE MMF_9_1_4_INDEX
+new   1: DROP TABLESPACE MMF_914_INDEX
 
 Tablespace dropped.
 
-Elapsed: 00:00:05.24
+Elapsed: 00:00:07.02
 *********
 

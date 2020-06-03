@@ -1,108 +1,110 @@
-Enter value for 1: MMF_9_1_4
+Enter value for 1: MMF_914
 Enter value for 2: E:\BD\oradata\ORCL\DATAFILE\
-Enter value for 3: oracle
 *********
-Username to create: MMF_9_1_4
+Username to create: MMF_914
 Path of datafile location: E:\BD\oradata\ORCL\DATAFILE\
 *********
 
 *********
 Calling create_tablespace.sql for data tablespace
-MMF_9_1_4_DATA
-E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_DATA.dbf
+MMF_914_DATA
+E:\BD\oradata\ORCL\DATAFILE\MMF_914_DATA.dbf
 old   1: CREATE TABLESPACE  &&TYPE_TBS_NAME
-new   1: CREATE TABLESPACE  MMF_9_1_4_DATA
+new   1: CREATE TABLESPACE  MMF_914_DATA
 old   3:         '&&TYPE_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
-new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_914_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 
 Tablespace created.
 
-Elapsed: 00:00:00.63
+Elapsed: 00:00:00.71
 *********
 
 *********
 Calling create_tablespace.sql for index tablespace
-Enter value for user_name: MMF_9_1_4
+Enter value for user_name: MMF_914
 Enter value for tbs_location: E:\BD\oradata\ORCL\DATAFILE\
-MMF_9_1_4_INDEX
-E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_INDEX.dbf
+MMF_914_INDEX
+E:\BD\oradata\ORCL\DATAFILE\MMF_914_INDEX.dbf
 old   1: CREATE TABLESPACE  &&TYPE_TBS_NAME
-new   1: CREATE TABLESPACE  MMF_9_1_4_INDEX
+new   1: CREATE TABLESPACE  MMF_914_INDEX
 old   3:         '&&TYPE_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
-new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_9_1_4_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_914_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 
 Tablespace created.
 
-Elapsed: 00:00:00.81
+Elapsed: 00:00:01.12
 *********
 
 *********
 Calling create_user.sql
-Enter value for user_name: MMF_9_1_4
+Enter value for user_name: MMF_914
 *******************************
 Script start: create_user.sql
 *******************************
 old   1: CREATE USER &&SCHEMA_NAME
-new   1: CREATE USER MMF_9_1_4
+new   1: CREATE USER MMF_914
 old   2: IDENTIFIED BY &&SCHEMA_PASSWORD
 new   2: IDENTIFIED BY oracle
 old   3: DEFAULT TABLESPACE &&DEFAULT_TBS
-new   3: DEFAULT TABLESPACE MMF_9_1_4_DATA
+new   3: DEFAULT TABLESPACE MMF_914_DATA
 old   5: QUOTA 20M on &&DEFAULT_TBS
-new   5: QUOTA 20M on MMF_9_1_4_DATA
+new   5: QUOTA 20M on MMF_914_DATA
+CREATE USER MMF_914
+            *
+ERROR at line 1:
+ORA-01920: user name 'MMF_914' conflicts with another user or role name 
 
-User created.
 
-Elapsed: 00:00:00.05
+Elapsed: 00:00:00.01
 SP2-0734: unknown command beginning "QUOTA 20M ..." - rest of line ignored.
 *********
 
 *********
-Calling grant.sql for MMF_9_1_4
+Calling grant.sql for MMF_914
 old   1: GRANT CREATE PROCEDURE TO &&SCHEMA_NAME
-new   1: GRANT CREATE PROCEDURE TO MMF_9_1_4
+new   1: GRANT CREATE PROCEDURE TO MMF_914
 
 Grant succeeded.
 
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.04
 old   1: GRANT CREATE SEQUENCE TO &&SCHEMA_NAME
-new   1: GRANT CREATE SEQUENCE TO MMF_9_1_4
+new   1: GRANT CREATE SEQUENCE TO MMF_914
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE TABLE TO &&SCHEMA_NAME
-new   1: GRANT CREATE TABLE TO MMF_9_1_4
+new   1: GRANT CREATE TABLE TO MMF_914
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE TYPE TO &&SCHEMA_NAME
-new   1: GRANT CREATE TYPE TO MMF_9_1_4
+new   1: GRANT CREATE TYPE TO MMF_914
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE TRIGGER TO &&SCHEMA_NAME
-new   1: GRANT CREATE TRIGGER TO MMF_9_1_4
+new   1: GRANT CREATE TRIGGER TO MMF_914
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE SYNONYM TO &&SCHEMA_NAME
-new   1: GRANT CREATE SYNONYM TO MMF_9_1_4
+new   1: GRANT CREATE SYNONYM TO MMF_914
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE SESSION TO &&SCHEMA_NAME
-new   1: GRANT CREATE SESSION TO MMF_9_1_4
+new   1: GRANT CREATE SESSION TO MMF_914
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE ANY DIRECTORY TO &&SCHEMA_NAME
-new   1: GRANT CREATE ANY DIRECTORY TO MMF_9_1_4
+new   1: GRANT CREATE ANY DIRECTORY TO MMF_914
 
 Grant succeeded.
 
