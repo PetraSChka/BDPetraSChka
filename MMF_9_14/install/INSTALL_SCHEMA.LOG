@@ -16,7 +16,7 @@ new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_914_DATA.dbf' SIZE 10M AUTOEXT
 
 Tablespace created.
 
-Elapsed: 00:00:00.71
+Elapsed: 00:00:00.76
 *********
 
 *********
@@ -32,7 +32,7 @@ new   3:         'E:\BD\oradata\ORCL\DATAFILE\MMF_914_INDEX.dbf' SIZE 10M AUTOEX
 
 Tablespace created.
 
-Elapsed: 00:00:01.12
+Elapsed: 00:00:00.71
 *********
 
 *********
@@ -49,24 +49,15 @@ old   3: DEFAULT TABLESPACE &&DEFAULT_TBS
 new   3: DEFAULT TABLESPACE MMF_914_DATA
 old   5: QUOTA 20M on &&DEFAULT_TBS
 new   5: QUOTA 20M on MMF_914_DATA
-CREATE USER MMF_914
-            *
-ERROR at line 1:
-ORA-01920: user name 'MMF_914' conflicts with another user or role name 
 
+User created.
 
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.03
 SP2-0734: unknown command beginning "QUOTA 20M ..." - rest of line ignored.
 *********
 
 *********
 Calling grant.sql for MMF_914
-old   1: GRANT CREATE PROCEDURE TO &&SCHEMA_NAME
-new   1: GRANT CREATE PROCEDURE TO MMF_914
-
-Grant succeeded.
-
-Elapsed: 00:00:00.04
 old   1: GRANT CREATE SEQUENCE TO &&SCHEMA_NAME
 new   1: GRANT CREATE SEQUENCE TO MMF_914
 
@@ -78,15 +69,9 @@ new   1: GRANT CREATE TABLE TO MMF_914
 
 Grant succeeded.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 old   1: GRANT CREATE TYPE TO &&SCHEMA_NAME
 new   1: GRANT CREATE TYPE TO MMF_914
-
-Grant succeeded.
-
-Elapsed: 00:00:00.00
-old   1: GRANT CREATE TRIGGER TO &&SCHEMA_NAME
-new   1: GRANT CREATE TRIGGER TO MMF_914
 
 Grant succeeded.
 
@@ -102,11 +87,41 @@ new   1: GRANT CREATE SESSION TO MMF_914
 
 Grant succeeded.
 
+Elapsed: 00:00:00.01
+old   1: GRANT CREATE PROCEDURE TO &&SCHEMA_NAME
+new   1: GRANT CREATE PROCEDURE TO MMF_914
+
+Grant succeeded.
+
 Elapsed: 00:00:00.00
+old   1: GRANT CREATE TRIGGER TO &&SCHEMA_NAME
+new   1: GRANT CREATE TRIGGER TO MMF_914
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE VIEW TO &&SCHEMA_NAME
+new   1: GRANT CREATE VIEW TO MMF_914
+
+Grant succeeded.
+
+Elapsed: 00:00:00.01
 old   1: GRANT CREATE ANY DIRECTORY TO &&SCHEMA_NAME
 new   1: GRANT CREATE ANY DIRECTORY TO MMF_914
 
 Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: ALTER USER &&SCHEMA_NAME QUOTA UNLIMITED ON &&SCHEMA_NAME._DATA
+new   1: ALTER USER MMF_914 QUOTA UNLIMITED ON MMF_914_DATA
+
+User altered.
+
+Elapsed: 00:00:00.01
+old   1: ALTER USER &&SCHEMA_NAME QUOTA UNLIMITED ON &&SCHEMA_NAME._INDEX
+new   1: ALTER USER MMF_914 QUOTA UNLIMITED ON MMF_914_INDEX
+
+User altered.
 
 Elapsed: 00:00:00.00
 *********

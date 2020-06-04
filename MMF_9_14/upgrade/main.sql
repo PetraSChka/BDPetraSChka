@@ -21,7 +21,6 @@ PROMPT Creating tables
 @upgrade001\create_table_stadiums.sql
 @upgrade001\create_table_team_statistics.sql
 @upgrade001\create_table_teams.sql
-@upgrade001\create_table_transfers.sql
 @upgrade001\create_table_events.sql
 
 -- Creating constraints
